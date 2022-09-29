@@ -1,0 +1,4 @@
+1, REQ-1: KeePass must be downloaded and installed
+2, REQ-2: Master Password has no limits in length. A whole sentence can be used with more than 100 characters.
+3, Folder selected must be of type the database can read and that is “name”.kdb
+4, Databases must have different names or else the previews one will be replace if selected
