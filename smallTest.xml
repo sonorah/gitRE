@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- New document created with EditiX at Tue Jun 07 14:21:44 CEST 2011 -->
+<req_document  xsi:schemaLocation="req_document.xsd req_document.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="req_document.xsd">
+
+<title>Software Requirements
+Specification
+for
+KeePass Password Safe</title>
+<version>1.10</version>
+<issue_date>2008-02-17</issue_date>
+<file_number>0</file_number>
+<p id= "1">
+<title>Introduction</title>
+<p id= "1.1">
+<title>Purpose</title>
+<text_body>
+This document includes software requirements for KeePass Password Safe, release number 1.10. KeePass Password Safe is an OSI Certified Open Source Software distributed under the terms of the GNU General Public License Version 2 or under. The system gives resolution to memorizing passwords problem. Its purpose is to keep all of the user’s passwords, data, email accounts, usernames and URLs stored in a very
+secure, encrypted database, protected by a Master Password. The system is very small so it can be easily transferred from one computer to another. It provides several functionalities on the already encrypted data and the new ones to be inserted. The database produced, is protected by a Master Password only known by
+its inventor with no backup if lost.
+</text_body>
+</p>
+</p> <!-- 1 -->
+<p id="2">
+<p id="2.1">
+<title>Product Perspective</title>
+<text_body>
+KeePass consists of a database which contains data for one or more users. Each user’s data are divided into groups and subgroups so that they are organized in a form that serves right the user. Every user has a unique Master Key which can be simple or composite and its combination opens uniquely the database. If lost there
+is no recovery. Groups and subgroups contain entries with usernames, passwords URLs etc that can be sent or copied to websites, application and accounts. There is also the ability for a onetime key creation to be used once in a transaction without the risk of reused by others for any reason.
+In the diagram below there are the main components of the system, subsystem interconnections and external interfaces to help you understand the main idea of KeePass. All of them are analyzed with more details in this document.
+</text_body>
+<p id="image 2.1"/>
+</p>
+<p id="2.2">
+<title>Product Features</title>
+<text_body>
+KeePass Password Safe provides the user with the following functions:
+<itemize>
+<item>Database – New, Open, Close, Save, Print, Search, Import, Export
+User can create a new database locked by a Master Key. The database can be opened and closed whenever user wants it. Changes on the data are permitted and the changes can be saved. The user also can print all data in order to keep them with him even when a computer is not available. Also the user can search the database using key words through a search engine provided with the software. Last but not least, the database can be imported and/or exported from/to the Internet.</item>
+<item>Group/Subgroup – Add, Modify, Delete, Find
+Data are organized in groups and subgroups in the order that user wants and finds effective.
+Those groups can be modified whenever. New groups and subgroups can be added easily and can be deleted the same way. The feature of searching can be applied in just one group and not in the whole database if wanted.</item>
+</itemize>
+</text_body>
+</p>
+<p id="2.6">
+<title>User Documentation</title>
+<text_body>
+By downloading KeePass Password Safe, the user also gets:
+<itemize>
+<item>A compiled HTML Help file with a tutorial and full help on all features provided</item>
+<item>A KeePass Internet shortcut which take the user in the system’s official website where are available downloads, translations, plug-ins and extensions.</item>
+</itemize>
+</text_body>
+</p>
+</p> <!-- 2 -->
+<p id="3">
+<title>System Features</title>
+<text_body>
+System features are organized by use cases and functional hierarchy so that the main functions of the system will be understandable.
+</text_body>
+<p id="3.1">
+<title>New Database</title>
+<text_body>
+This feature provides the ability to create a new database
+</text_body>
+<p id="3.1.1">
+<title>Description</title>
+<text_body>
+It is the first thing a user must do to begin using KeePass. Its main function is the determination of the master password that will unlock the database from now on
+</text_body>
+</p>
+<p id="3.1.2">
+<title>Stimulus/Response Sequences</title>
+<text_body>
+Data Flow
+</text_body>
+<p id="3.1.2.1">
+<title>Basic Data Flow</title>
+<text_body>
+<itemize>
+<item>User opens KeePass and select New->Database</item>
+<item>User writes his private Master Password and/or selects Key File</item>
+<item>User selects OK</item>
+<item>Master Password confirmation: the user retypes Master Password</item>
+<item>The main database window opens</item>
+</itemize>
+</text_body>
+</p>
+<p id="3.1.2.2">
+<title>Alternative Data Flows</title>
+<p id="3.1.2.2.1">
+<title>Alternative Data Flow 1</title>
+<text_body>
+<itemize>
+<item>User selects Help</item>
+<item>The help file opens</item>
+</itemize>
+</text_body>
+</p>
+<p id="3.1.2.2.2">
+<title>Alternative Data Flow 2</title>
+<text_body>
+<itemize>
+<item>User selects Cancel</item>
+<item>Exit from KeePass</item>
+</itemize>
+</text_body>
+</p>
+<p id="3.1.2.2.3">
+<title>Alternative Data Flow 3</title>
+<text_body>
+<itemize>
+<item>The user does not determines a Master Password</item>
+<item>A message is appeared which prompts him to enter a password or key file</item>
+</itemize>
+</text_body>
+</p>
+</p> <!-- 3.1.2.2 -->
+</p> <!-- 3.1.2 -->
+<p id="3.1.3">
+<title>Functional Requirements</title>
+<req id="1">
+<text_body>
+REQ-1: KeePass must be downloaded and installed
+</text_body>
+</req>
+<req id="2">
+<text_body>
+REQ-2: Master Password has no limits in length. A whole sentence can be used with more than 100 characters.
+</text_body>
+</req>
+</p>
+</p> <!-- 3.1 -->
+<p id="3.2">
+<title>Open Database</title>
+<text_body>
+This feature allows the user to open an existing database.
+</text_body>
+<p id="3.2.1">
+<title>Description</title>
+<text_body>
+When choosing to open a database a user is transferred to his documents where he navigates to find the database he wants. When the database is found, the master password is wanted so that the database will be unlocked. Once this is done the user is free to access his data.
+</text_body>
+</p>
+<p id="3.2.2">
+<title>Stimulus/Response Sequences</title>
+<text_body>
+Data Flow
+</text_body>
+</p> <!-- 3.2.2 -->
+<p id="3.2.3">
+<title>Functional Requirements</title>
+<req id="3">
+<text_body>
+Folder selected must be of type the database can read and that is “name”.kdb
+</text_body>
+</req>
+</p>
+</p> <!-- 3.2 -->
+<p id="3.3">
+<title>Save Database</title>
+<text_body>
+This feature allows the user to save any changes or updates he has performed to his database.
+</text_body>
+<p id="3.3.1">
+<title>Description</title>
+<text_body>
+When a database is opened, the user can access his passwords, organize them into new
+groups and subgroups, delete and add entries and so much more. But when it is time for the database to close or during his working on the database, he can save the changes made.
+</text_body>
+</p>
+<p id="3.3.2">
+<title>Stimulus/Response Sequences</title>
+<text_body>
+Data Flow
+</text_body>
+<p id="3.3.2.1">
+<title>Basic Data Flow</title>
+<text_body>
+<itemize>
+<item>User opens KeePass and changes his data</item>
+<item>User selects save database</item>
+<item>Database is saved</item>
+<item>User exits KeePass</item>
+</itemize>
+</text_body>
+</p>
+<p id="3.3.2.2">
+<title>Alternative Data Flows</title>
+<p id="3.3.2.2.4">
+<title>Alternative Data Flow 4</title>
+<text_body>
+<itemize>
+<item>Users minimizes the database</item>
+<item>A message is appeared asking if he wants to save the database before locking</item>
+</itemize>
+</text_body>
+</p>
+</p> <!-- 3.3.2.2 -->
+</p> <!-- 3.3.2 -->
+<p id="3.3.3">
+<title>Functional Requirements</title>
+<req id="4">
+<text_body>
+Databases must have different names or else the previews one will be replace if selected
+</text_body>
+</req>
+</p>
+</p> <!-- 3.3 -->
+</p>
+</req_document>
