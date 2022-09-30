@@ -1,0 +1,24 @@
+1,             The format for service information description is defined          
+1,             The format for service information description is defined          
+2,             The interaction protocol between Web Server-SR, SR-mediator is defined.          
+3,             Resource provisioning, delegation and reservation policies are in place          
+4,             There is an established norm that any resource failure will be reported          
+5,             The interaction protocol between Web Server-SR, SR-mediator is defined.          
+1,             Malicious requests are detected and rejected.          
+2,             Web servers have already replicated necessary content.          
+3,             Both anticipated and unanticipated user requests (traffic) are considered.          
+4,             The format for service information description is defined          
+1,             The format of service requirements is defined.          
+2,             Mediator-SR, mediator-PR, mediator-PA interaction protocols are defined.          
+3,             Mediator works in conjunction with the PA to establish negotiation.          
+1,             Interaction protocols between PAs are identified.          
+2,             Malicious requests are identified and acted upon.          
+3,             There are existing policies for long-term peering arrangement.          
+4,             There is procedure to perform short-term negotiation.          
+1,               Negotiation is established between selected CDN peers.            
+2,               Primary CDN has already acquired sufficient external resources.            
+3,               Functional policies are identified and deployed.            
+4,               Effective content delivery is ensured through SLA satisfaction.            
+1,             Policies identifying the consequences of SLA violation are defined.          
+2,             Policies are in place to perform renegotiation for problem resolution.          
+3,             Policies are in place to perform renegotiation for problem resolution.          

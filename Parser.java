@@ -14,16 +14,16 @@ public class Parser {
    public static void main(String[] args) throws Exception{
 
         for (int i = 1; i<19;i++){
-            NodeList nList = extractRequirements(String(i)+".xml");
+            NodeList nList = extractRequirements(Integer.toString(i)+".xml");
             // now that the requirements are stored in nList, all we need to do is print them out cohesively 
-            createCSV(nList,outputName);
+            createCSV(nList,Integer.toString(i)+".csv");
         }
         
    }
 
    public static NodeList extractRequirements(String filename) throws Exception{
 
-    File inputFile = new File(filename);
+    File inputFile = new File("datasets",filename);
 
     DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
     DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
