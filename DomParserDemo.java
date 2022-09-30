@@ -1,4 +1,3 @@
-package com.tutorialspoint.xml;
 import java.io.File;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;

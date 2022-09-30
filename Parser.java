@@ -13,7 +13,7 @@ public class Parser {
    
    public static void main(String[] args) throws Exception{
 
-        NodeList nList = extractRequirements("smallTest.xml");
+        NodeList nList = extractRequirements("0000 - cctns.xml");
         // now that the requirements are stored in nList, all we need to do is print them out cohesively 
         createCSV(nList);
    }
