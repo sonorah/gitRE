@@ -13,9 +13,12 @@ public class Parser {
    
    public static void main(String[] args) throws Exception{
 
-        NodeList nList = extractRequirements("0000 - cctns.xml");
-        // now that the requirements are stored in nList, all we need to do is print them out cohesively 
-        createCSV(nList);
+        for (int i = 1; i<19;i++){
+            NodeList nList = extractRequirements(String(i)+".xml");
+            // now that the requirements are stored in nList, all we need to do is print them out cohesively 
+            createCSV(nList,outputName);
+        }
+        
    }
 
    public static NodeList extractRequirements(String filename) throws Exception{
@@ -34,9 +37,9 @@ public class Parser {
     return nList;
    }
 
-   public static void createCSV(NodeList nList) throws Exception{
+   public static void createCSV(NodeList nList, String outputName) throws Exception{
 
-    File outputCSV = new File("output.csv");
+    File outputCSV = new File(outputName);
     PrintWriter pw = new PrintWriter(new FileWriter(outputCSV));
 
     for (int temp = 0; temp < nList.getLength(); temp++) {
